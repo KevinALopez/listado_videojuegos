@@ -1,0 +1,16 @@
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Titulo</th>
+    <th>valoracionMedia</th>
+  </tr>
+  <tr *ngFor="let vj of listaVideojuegos">
+    <td>{{ vj.id }}</td>
+    <td>
+      <a [routerLink]="['videojuego']" [state]="vj">
+        {{ vj.titulo }}
+      </a>
+    </td>
+    <td>{{ vj.valoracionMedia }}</td>
+  </tr>
+</table>
